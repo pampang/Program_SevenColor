@@ -1,0 +1,29 @@
+	商家加盟管理		*
+		申请加盟	merchant_register
+	商家账户管理		*	merchant_subaccount
+		添加子账户	merchant_subaccount_add
+		修改子账户信息	merchant_subaccount_modify
+	商家登录管理		*
+		登录		../login
+		注销		
+		修改密码	merchant_pwd_change
+		密码重置	../reset
+	商家展示信息维护	*
+		资料维护	merchant_info_maintain
+		产品维护	merchant_product_maintain, merchant_product_maintain_add, merchant_product_maintain_modify
+	会员充值管理		**
+		会员充值	merchant_member_charge
+		充值历史查询	merchant_member_charge_history
+		充值统计    	merchant_statics_member_charge
+	会员卡发放管理		*
+		会员登记	merchant_member_register
+		已发卡统计  	merchant_statics_card_info	
+		未发卡统计	merchant_statics_card_info
+	会员消费管理		**
+		储值刷卡消费	merchant_member_consume
+		消费统计    	merchant_statics_member_consume
+	站内消息管理		*
+		接收信息    表格
+	商家消费点评回复	**
+		点评查询	merchant_commend
+		点评回复	merchant_commend

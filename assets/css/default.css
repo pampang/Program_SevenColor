@@ -1,0 +1,73 @@
+/*这是一个插件！*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: #555;
+    background: #e1e1e1;
+}
+.sidebar{
+    margin-left: 0;
+}
+ul.expmenu *{
+    list-style: none;
+}
+
+ul.expmenu > li > div.header{
+    padding: 12px;
+    border-bottom: 1px #39639f solid;
+}
+
+ul.expmenu > li:last-child > div.header{
+    border-bottom: none;
+}
+
+ul.expmenu > li ul li{
+    background-color: #ececec;
+    padding: 12px;
+    border-bottom: 1px solid #dcdcdc;
+    border-top: 1px solid #fff;
+    color:#727272;
+    text-shadow: 0px 1px rgba(255,255,255,0.8);
+}
+
+ul.expmenu >li ul li:last-child{
+    border-bottom: none;
+}
+
+ul.expmenu > li ul li.selected{
+    background-color: #f4f4f4;
+}
+ul.expmenu div.header{
+    color: #203f61;
+    text-shadow: 0px 1px 0px rgba(255,255,255,0.2);
+
+    background: #4d7fb8;
+}
+
+ul.expmenu > li > div.header > .label{
+    padding-left: 24px;
+    background: no-repeat;
+}
+
+ul.expmenu > li > div.header > .arrow{
+    display: block;
+    float: right;
+}
+
+ul.expmenu div.header:hover{
+    background: #4571a0;
+    cursor: pointer;
+}
+
+ul.expmenu > li ul li:not(.selected):hover{
+    background: #e7e7e7;
+    cursor: pointer;
+}
+
+ul.expmenu > li ul li:not(.selected):active{
+    background: #f1f1f1;
+    cursor: pointer;
+}

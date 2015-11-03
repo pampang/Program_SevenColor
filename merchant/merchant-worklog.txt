@@ -1,0 +1,66 @@
+﻿---v 1---
+√1、还需添加头部。
+2、是否有必要根据子模块再次细分页面。
+√4、form头部出现了错误，需要统一修改。
+5、以下是搜索框的基本样式。可以在每个表格页面都添加，方便查询。
+<form class="form-horizontal col-md-offset-4 col-md-4">
+		<div class="form-group">
+			<div class="col-md-9">
+				<input class="form-control" type="text" name="query" id="query" placeholder="请输入查询条件">
+			</div>
+			<div class="col-md-3">
+				<button class="btn btn-primary">查询</button>
+			</div>
+		</div>
+	</form>
+
+√6、需要面包屑导航。
+√8、为导航栏添加小图标 phlyhicon。
+
+---v 2---
+08-11 20:20
+添加了merchant各个页面的基本主题样式。插入了normal.css，并设计了头部。
+添加了面包屑导航。
+
+1、导航栏缺乏logo跳转。同时需要对Login和reset进行进一步的导航栏设计。
+2、缺少footer。
+	<div class="container text-center bottom-radius">
+		©This page is made by <a href="">11 Group-SCAU</a>. <br />All rights reserved. 
+	</div>
+.bottom-radius{
+        border-bottom-left-radius: 5%;
+        border-bottom-right-radius: 5%;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        border-top: 1px #eee solid;
+}
+3、图标路径显示不正确。
+
+
+08-13 10:00
+1、在merchant_product_maintain.html页面尝试排序按钮。使用<a href="#"><span class="glyphicon glyphicon-resize-vertical"></span></a>。
+2、在merchant_product_maintian.html添加了搜索框。感觉不错。
+3、调整了各部件的位置布局。最终版是merchant_product_maintain.html。
+
+
+
+***已经修整表格页面***
+merchant_member_charge_history.html√
+merchant_product_maintain.html√
+merchant_card_info√
+merchant_statics_member_charge√
+merchant_statics_memeber_consume√
+merchant_subaccount(最像maintain.html) √
+添加下方翻页按钮
+添加排序按钮
+添加搜索框
+
+
+0813
+1、加入了城市选择和类型选择。（JS实现）。
+2、正在进行错误提示信息的处理。
+
+0814
+1、将会员卡信息统计一分为3，分成三个网页。
+2、制作了login和reset的JSP页面。
+3、

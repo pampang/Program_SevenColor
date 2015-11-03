@@ -1,0 +1,127 @@
+/*for normalize the background color and the header(h2 for title and breadcrumb for nav)*/
+body{
+    background: #ffefad;
+    color: #808000;
+}
+/*setting logo size*/
+.navbar-header img{
+    height: 50px;
+}
+
+/*setting header and footer*/
+/*for header*/
+    h2{
+        border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
+        width: auto;
+        text-align: center;
+        /*font-weight: bold;*/
+        margin-bottom: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px #eee solid;
+    }
+
+    /*for footer*/
+    .bottom-radius{
+            border-bottom-left-radius: 5%;
+            border-bottom-right-radius: 5%;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            border-top: 1px #eee solid;
+    }
+    .container{
+        background: #f5f5f5;
+    }
+/*end setting header and footer*/
+
+/*for format the element into horizontal center*/
+.center{
+    display: table;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*for styling fieldset > legend*/
+fieldset legend{
+    font-size: 15px;
+    /*font-family: microsoft yahei';*/
+    margin-top: 10px;
+    color: #999;
+}
+
+form em{
+    display: inline-block;
+    width: 10px;
+    text-align: center;
+    font-weight: bolder;
+    font-style: normal;
+    color: #c12e2a;
+}
+/*for ranking icon in table head*/
+    th > a{
+        position: absolute;
+    }
+
+/*小动画*/
+    .navbar-header img{
+        -webkit-animation: logo .6s ease-in-out;
+    }
+
+
+    @-webkit-keyframes logo{
+        0%{
+            margin-left: -100%;
+        }
+        100%{
+            margin-left: 0;
+        }
+    }
+
+    .container{
+        -webkit-animation: container 1s ease-in-out;
+    }
+
+    @-webkit-keyframes container{
+        0%{
+            margin-top: 100%;
+        }
+        100%{
+            margin-top: 0;
+        }
+    }
+
+/*针对选择文件做的优化*/
+
+.file{
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    top: 0; 
+    left: 0; 
+    opacity: 0;
+    z-index: 999;
+}
+
+.msg-count{
+    position: absolute;
+    display: inline-block;
+    line-height: 15px;
+    font-size: 15px;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: red;
+    color: #fff;
+}
+
+#merchant-picture img{
+            max-width: 120px;
+            max-height: 120px;
+}
+
+#picture img{
+            max-width: 120px;
+            max-height: 120px;
+}

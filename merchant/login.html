@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	登录-七彩云欢迎您</title>
+	<link rel="stylesheet" href="../bs/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/dropdown-submenu.css">
+	<link rel="stylesheet" href="../assets/css/normal.css"/>
+
+	<!-- 2015.7.11-19:34-->
+	<!-- include normal.css, gathering the special style setting -->
+	<!-- adding new icon to navbar, only for the very first list -->
+
+</head>
+<body>
+	
+	<div class="navbar navbar-default" role="navigation">
+	    <div class="container-fluid">
+
+	        <div class="navbar-header">
+	            <img src="../logo.png" alt="" height="50px">
+	        </div>
+	    </div>
+	</div>
+
+	<h2 class="container">登录</h2>
+
+	<div class="container">
+
+		<div>
+			<ol class="breadcrumb">
+				<li><a href="javascript:;">商家管理平台</a></li>
+				<li class="active">登录</li>
+			</ol>
+		</div>
+
+		<form class="form-horizontal" id="login-form" role="login-form" action="merchantLogin.action" method="post">
+			<fieldset class="col-md-offset-3 col-md-6">
+
+				<div class="form-wrap col-md-12">
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="user-name">用户名：</label>
+						<div class="col-md-9">
+							<input type="text" class="form-control" name="account" id="user-name" placeholder="请输入您的账号">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="user-pwd">密码：</label>
+						<div class="col-md-9">
+							<input type="password" class="form-control" name="password" id="user-pwd" placeholder="请输入您的密码">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="verification-code">验证码：</label>
+						<div class="col-md-7">
+							<input type="text" class="form-control" id="verification-code" placeholder="请输入验证码">
+						</div>
+						<div class="col-md-2">
+							<img class="" src="#" alt="验证码">
+						</div>
+					</div>	
+				</div>
+
+				<div class="form-group">
+					<div class="col-md-offset-3 col-md-6 text-center">
+						<button type="submit" class="btn btn-success btn-lg btn-block">GO!</button>
+						<div>
+							<input class="text-warning" type="checkbox">记住我
+							<span style="width: 1px;">|</span>
+							<a href="merchant_register.html">商家注册</a>	
+							<span style="width: 1px;">|</span>
+							<a href="reset.html">找回密码</a>
+						</div>
+					</div>
+				</div>
+			</fieldset>			
+		</form>
+	</div>
+
+	<div class="container text-center bottom-radius">
+		©This page is made by <a href="">11 Group-SCAU</a>. <br />All rights reserved. 
+	</div>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	产品列表-七彩云欢迎您</title>
+	<link rel="stylesheet" href="../bs/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/dropdown-submenu.css">
+	<link rel="stylesheet" href="../assets/css/normal.css"/>
+
+<style>
+	.pop{
+		background: rgba(60, 60, 60, .6);
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		margin: auto;
+		z-index: 10000;
+		overflow: hidden;
+		display: none;
+	}
+
+	.pop-wrap{
+		background: #ffefad;
+		width: 60%;
+		min-height: 30%;
+		margin: 0 auto;
+		margin-top: 10%;
+		border-radius: 2%;
+		padding: 0 5px 10px;
+	}
+
+	.pop h3{
+		padding: 5px;
+		color: #808000;
+		border-bottom: 4px double black;
+		font-weight: bold;
+	}
+
+	.pop p{
+		font-size: 18px;
+		color: #808000;
+	}
+</style>
+
+	<!-- 2015.7.11-19:34-->
+	<!-- include normal.css, gathering the special style setting -->
+	<!-- adding new icon to navbar, only for the very first list -->
+
+</head>
+<body>
+	
+	<div class="navbar navbar-default" role="navigation">
+	    <div class="container-fluid">
+
+	        <div class="navbar-header">
+	            <a href="index.html"><img src="logo.png" alt="" height="50px"></a>
+	        </div>
+
+	        <div id="index-navbar" aria-expanded="false">
+	            <ul class="nav navbar-nav navbar-right">
+
+	              <li class="dropdown">
+	              	<a class="dropdown-toggle" data-toggle="dropdown" role="button" href="javascript:;">
+	              		<i class="glyphicon glyphicon-user"></i> 会员管理<span class="caret"></span>
+	              	</a>
+	              	<ul class="dropdown-menu">
+	              		<li class="dropdown-submenu">
+	              			<a tabindex="-1" href="javascript:;">充值管理</a>
+	              			<ul class="dropdown-menu">
+	              				<li><a href="member_charge.html">会员充值</a></li>
+	              				<li><a href="statics_member_charge_one.html">会员充值统计</a></li>
+	              			</ul>
+	              		</li>
+	              		<li class="dropdown-submenu">
+	              			<a tabindex="-1" href="javascript:;">消费管理</a>
+	              			<ul class="dropdown-menu">
+	              				<li><a href="member_consume.html">会员消费</a></li>
+	              				<li><a href="statics_member_consume_one.html">会员消费统计</a></li>
+	              			</ul>
+	              		</li>
+	              		<li><a href="commentReply.html">点评总览</a></li>
+	              		<li><a href="card_info_all.html">会员卡信息统计</a></li>
+	              		<li><a href="member_register.html">会员注册</a></li>
+	              	</ul>
+	              </li>
+
+	              <li class="dropdown">
+	              	<a class="dropdown-toggle" data-toggle="dropdown" role="button" href="javascript:;">
+	              		<span class="glyphicon glyphicon-briefcase"></span> 商家中心<span class="caret"></span>
+	              	</a>
+	              	<ul class="dropdown-menu">
+						<li class="dropdown-submenu">
+							<a href="javascript:;">信息维护</a>
+							<ul class="dropdown-menu">
+								<li><a href="info_modify.html">基本资料修改</a></li>
+								<li><a href="product.html">产品列表</a></li>
+								<li><a href="activity.html">活动列表</a></li>
+							</ul>
+						</li>
+						<li><a href="msg.html">站内消息</a></li>
+	              	</ul>
+	              </li>
+
+	              <li class="dropdown">
+	              	<a class="dropdown-toggle" data-toggle="dropdown" role="button" href="javascript:;">
+	              		<span class="glyphicon glyphicon-wrench"></span> 账户管理<span class="caret"></span>
+	              	</a>
+	              	<ul class="dropdown-menu">
+	              		<li><a href="subaccount.html">子账号管理</a></li>
+	              		<li><a href="pwd_change.html">修改密码</a></li>
+	              	</ul>
+	              </li>
+	              <li>
+	              	<a href="login.html"> <!--返回主页。-->
+	              		<span class="glyphicon glyphicon-remove"></span> 注销
+	              	</a>
+	              </li>
+	            </ul>
+	        </div>
+	    </div>
+	</div>
+
+	<h2 class="container">产品列表</h2>
+	<div class="container">
+
+		<div>
+			<ol class="breadcrumb">
+				<li><a href="index.html">商家管理平台</a></li>
+				<li class="active">产品列表</li>
+			</ol>
+		</div>
+
+		
+
+		<form class="form-horizontal col-md-12">
+			<div class="form-group">
+				<div class="col-md-offset-4 col-md-3">
+					<div class="col-md-10">
+						<input class="form-control" type="text" name="query" id="query" placeholder="请输入查询条件">
+					</div>
+					<div class="col-md-2">
+						<button class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
+					</div>
+				</div>
+				<div class="col-md-1">
+						<a href="merchant_product_maintain_add.html" class="btn btn-success btn"><span class="glyphicon glyphicon-plus"></span>添加产品</a>
+				</div>
+			</div>
+		</form>
+
+		
+
+		<table class="table table-striped table-bordered">
+			<thead>
+				<tr class="text-center">
+					<th class="text-center">产品名称<a href="javascript:;"><span class="glyphicon glyphicon-resize-vertical"></span></a></th>
+					<th class="text-center">产品价格<a href="javascript:;"><span class="glyphicon glyphicon-resize-vertical"></span></a></th>
+					<th class="text-center">产品图片</th>
+					<th class="text-center">操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="text-center">
+						<a href="javascript:;" class="pop-link">牛脑壳</a>
+						<div class="pop">
+							<div class="pop-wrap text-center">
+								<h3>产品详情</h3>
+								<p id="pop-msg-show" class="center text-left">美味的牛脑壳，补肾佳品！</p>
+								<button class="detail-confirm" class="btn btn-primary">确定</button>
+							</div>
+						</div>
+					</td>
+					<td class="text-center">55.00</td>
+					<td class="text-center pop hide">
+						
+					</td>
+					<td class="text-center">
+						<div id="merchant-picture">
+							<img src="../logo.png" alt="">
+						</div>
+					</td>
+					<td class="text-center">
+						<a href="" class="btn btn-primary btn-xs">编辑</a>
+						<a href="" class="btn btn-primary btn-xs" onclick="confirm('是否确认删除？')">删除</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="btn-group form-group btn-group-sm center">
+			<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-fast-backward"></span></button>
+			<button type="button" class="btn btn-default active">1</button>
+			<button type="button" class="btn btn-default">2</button>
+			<button type="button" class="btn btn-default">3</button>
+			<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-fast-forward"></span></button>
+		</div>
+
+	</div>
+
+	<div class="container text-center bottom-radius">
+		©This page is made by <a href="">11 Group-SCAU</a>. <br />All rights reserved. 
+	</div>
+
+	<script src="../assets/js/jquery.min.js"></script>
+    <script src="../bs/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.tools.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script>
+    	$(".pop-link").click(function(){
+    		$(this).next().show();
+    	})
+		$(".detail-confirm").click(function(){
+			$(this).parent().parent().hide();
+		});
+	</script>
+</body>
+</html>

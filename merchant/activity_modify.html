@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	活动修改-七彩云欢迎您</title>
+	<link rel="stylesheet" href="../bs/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/dropdown-submenu.css">
+	<link rel="stylesheet" href="../assets/css/normal.css"/>
+
+	<!-- 2015.7.11-19:34-->
+	<!-- include normal.css, gathering the special style setting -->
+	<!-- adding new icon to navbar, only for the very first list -->
+
+</head>
+<body>
+	
+		<div class="navbar navbar-default" role="navigation">
+	    <div class="container-fluid">
+
+	        <div class="navbar-header">
+	            <a href="index.html"><img src="logo.png" alt="" height="50px"></a>
+	        </div>
+
+	        <div id="index-navbar" aria-expanded="false">
+	            <ul class="nav navbar-nav navbar-right">
+
+	              <li class="dropdown">
+	              	<a class="dropdown-toggle" data-toggle="dropdown" role="button" href="javascript:;">
+	              		<i class="glyphicon glyphicon-user"></i> 会员管理<span class="caret"></span>
+	              	</a>
+	              	<ul class="dropdown-menu">
+	              		<li class="dropdown-submenu">
+	              			<a tabindex="-1" href="javascript:;">充值管理</a>
+	              			<ul class="dropdown-menu">
+	              				<li><a href="member_charge.html">会员充值</a></li>
+	              				<li><a href="statics_member_charge_one.html">会员充值统计</a></li>
+	              			</ul>
+	              		</li>
+	              		<li class="dropdown-submenu">
+	              			<a tabindex="-1" href="javascript:;">消费管理</a>
+	              			<ul class="dropdown-menu">
+	              				<li><a href="member_consume.html">会员消费</a></li>
+	              				<li><a href="statics_member_consume_one.html">会员消费统计</a></li>
+	              			</ul>
+	              		</li>
+	              		<li><a href="commentReply.html">点评总览</a></li>
+	              		<li><a href="card_info_all.html">会员卡信息统计</a></li>
+	              		<li><a href="member_register.html">会员注册</a></li>
+	              	</ul>
+	              </li>
+
+	              <li class="dropdown">
+	              	<a class="dropdown-toggle" data-toggle="dropdown" role="button" href="javascript:;">
+	              		<span class="glyphicon glyphicon-briefcase"></span> 商家中心<span class="caret"></span>
+	              	</a>
+	              	<ul class="dropdown-menu">
+						<li class="dropdown-submenu">
+							<a href="javascript:;">信息维护</a>
+							<ul class="dropdown-menu">
+								<li><a href="info_modify.html">基本资料修改</a></li>
+								<li><a href="product.html">产品列表</a></li>
+								<li><a href="activity.html">活动列表</a></li>
+							</ul>
+						</li>
+						<li><a href="msg.html">站内消息</a></li>
+	              	</ul>
+	              </li>
+
+	              <li class="dropdown">
+	              	<a class="dropdown-toggle" data-toggle="dropdown" role="button" href="javascript:;">
+	              		<span class="glyphicon glyphicon-wrench"></span> 账户管理<span class="caret"></span>
+	              	</a>
+	              	<ul class="dropdown-menu">
+	              		<li><a href="subaccount.html">子账号管理</a></li>
+	              		<li><a href="pwd_change.html">修改密码</a></li>
+	              	</ul>
+	              </li>
+	              <li>
+	              	<a href="login.html"> <!--返回主页。-->
+	              		<span class="glyphicon glyphicon-remove"></span> 注销
+	              	</a>
+	              </li>
+	            </ul>
+	        </div>
+	    </div>
+	</div>
+
+	<h2 class="container">活动修改</h2>
+	<div class="container">
+
+		<div>
+			<ol class="breadcrumb">
+				<li><a href="index.html">商家管理平台</a></li>
+				<li class="active">活动修改</li>
+			</ol>
+		</div>
+
+		<form class="form-horizontal" role="form">
+
+		<fieldset>
+
+			<fieldset class="col-md-offset-3 col-md-6">
+
+				<div class="form-wrap col-md-12">
+
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="activity-name"><em>*</em>活动名称：</label>
+						<div class="col-md-9">
+							<input class="form-control" type="text" id="activity-name" placeholder="请输入活动名称" disabled="disabled">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="activity-introduction">活动简介：</label>
+						<div class="col-md-9">
+							<textarea class="form-control" rows="3" id="activity-introduction"></textarea>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="merchant-picture">活动图片：</label>
+						<div class="col-md-9" id="merchant-picture">
+							<img id="img" src="null" alt="">
+							<button class="btn btn-default" type="button">
+								<span class="glyphicon glyphicon-edit">
+									修改
+									<input id="file" type="file" class="file" onchange="ProcessFile()">
+								</span>						
+							</button>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="activity-date"><em>*</em>结束时间：</label>
+						<div class="col-md-9">
+							<input class="form-control" type="date" id="activity-date">
+						</div>
+					</div>
+
+				</div>
+
+				<!-- 这里放按钮和其他小部件。一般居中显示。按钮以长条形态出现。 -->
+				<div class="form-group">
+					<div class="col-md-offset-3 col-md-6 text-center">
+						<button type="submit" class="btn btn-success btn-lg btn-block">确认无误,我要修改！</button>
+					</div>
+				</div>
+			</fieldset>
+			
+		</fieldset>	
+		</form>
+	</div>
+
+	<div class="container text-center bottom-radius">
+		©This page is made by <a href="">11 Group-SCAU</a>. <br />All rights reserved. 
+	</div>
+
+	<script src="../assets/js/jquery.min.js"></script>
+    <script src="../bs/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.tools.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <!-- 图片修改 -->
+    <script type="text/javascript">
+		function ProcessFile(e){ 
+		    var file = document.getElementById('file').files[0];
+		    if(file){
+		        var reader = new FileReader();
+		        reader.onload = function(event){ 
+		        	var txt = event.target.result;
+		        	if(txt.split("/")[0].split(":")[1] == "image"){
+		        		img = document.getElementById("img");
+		        		img.src = txt;
+			    	} else {
+			    		alert("格式错误！");
+			    	}
+			    };
+			}
+			reader.readAsDataURL(file);
+		}
+	</script>
+</body>
+</html>

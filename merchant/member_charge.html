@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	会员充值-七彩云欢迎您</title>
+	<link rel="stylesheet" href="../bs/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/dropdown-submenu.css">
+	<link rel="stylesheet" href="../assets/css/normal.css"/>
+
+	<!-- 2015.7.11-19:34-->
+	<!-- include normal.css, gathering the special style setting -->
+	<!-- adding new icon to navbar, only for the very first list -->
+
+</head>
+<body>
+	
+	<div class="navbar navbar-default" role="navigation">
+	    <div class="container-fluid">
+
+	        <div class="navbar-header">
+	            <a href="index.html"><img src="logo.png" alt="" height="50px"></a>
+	        </div>
+
+	        <div id="index-navbar" aria-expanded="false">
+	            <ul class="nav navbar-nav navbar-right">
+
+	              <li class="dropdown">
+	              	<a class="dropdown-toggle" data-toggle="dropdown" role="button" href="javascript:;">
+	              		<i class="glyphicon glyphicon-user"></i> 会员管理<span class="caret"></span>
+	              	</a>
+	              	<ul class="dropdown-menu">
+	              		<li class="dropdown-submenu">
+	              			<a tabindex="-1" href="javascript:;">充值管理</a>
+	              			<ul class="dropdown-menu">
+	              				<li><a href="member_charge.html">会员充值</a></li>
+	              				<li><a href="statics_member_charge_one.html">会员充值统计</a></li>
+	              			</ul>
+	              		</li>
+	              		<li class="dropdown-submenu">
+	              			<a tabindex="-1" href="javascript:;">消费管理</a>
+	              			<ul class="dropdown-menu">
+	              				<li><a href="member_consume.html">会员消费</a></li>
+	              				<li><a href="statics_member_consume_one.html">会员消费统计</a></li>
+	              			</ul>
+	              		</li>
+	              		<li><a href="commentReply.html">点评总览</a></li>
+	              		<li><a href="card_info_all.html">会员卡信息统计</a></li>
+	              		<li><a href="member_register.html">会员注册</a></li>
+	              	</ul>
+	              </li>
+
+	              <li class="dropdown">
+	              	<a class="dropdown-toggle" data-toggle="dropdown" role="button" href="javascript:;">
+	              		<span class="glyphicon glyphicon-briefcase"></span> 商家中心<span class="caret"></span>
+	              	</a>
+	              	<ul class="dropdown-menu">
+						<li class="dropdown-submenu">
+							<a href="javascript:;">信息维护</a>
+							<ul class="dropdown-menu">
+								<li><a href="info_modify.html">基本资料修改</a></li>
+								<li><a href="product.html">产品列表</a></li>
+								<li><a href="activity.html">活动列表</a></li>
+							</ul>
+						</li>
+						<li><a href="msg.html">站内消息</a></li>
+	              	</ul>
+	              </li>
+
+	              <li class="dropdown">
+	              	<a class="dropdown-toggle" data-toggle="dropdown" role="button" href="javascript:;">
+	              		<span class="glyphicon glyphicon-wrench"></span> 账户管理<span class="caret"></span>
+	              	</a>
+	              	<ul class="dropdown-menu">
+	              		<li><a href="subaccount.html">子账号管理</a></li>
+	              		<li><a href="pwd_change.html">修改密码</a></li>
+	              	</ul>
+	              </li>
+	              <li>
+	              	<a href="login.html"> <!--返回主页。-->
+	              		<span class="glyphicon glyphicon-remove"></span> 注销
+	              	</a>
+	              </li>
+	            </ul>
+	        </div>
+	    </div>
+	</div>
+	
+
+	<h2 class="container">会员充值</h2>
+	<div class="container">
+
+		<div>
+			<ol class="breadcrumb">
+				<li><a href="index.html">商家管理平台</a></li>
+				<li class="active">会员充值</li>
+			</ol>
+		</div>
+
+		<form class="form-horizontal" id="login-form" role="login-form">
+
+			<fieldset class="col-md-offset-3 col-md-6">
+
+				<div class="form-wrap col-md-12">
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="member-card">会员卡号：</label>
+						<div class="col-md-7">
+							<input type="text" class="form-control" id="user-name" placeholder="请输入会员卡号">
+						</div>
+						<div class="col-md-2 text-center">
+							<button id="readCard" type="submit" class="btn btn-primary btn-block">读卡</button>
+						</div>
+					</div>
+
+<script>
+	var readCard = document.getElementById("readCard");
+	readCard.onclick = function(){
+		var xhr = createXHR();
+		xhr.onreadystagechange = function(){
+			if(xhr.readyState == 4){
+				if((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304){
+					alert(xhr.responseText);
+				}else{
+					alert("Request was unsuccessful:" + xhr.status);
+				}
+			}
+		}
+		xhr.open("get", "readCardAction.action", false);
+		xhr.send(null);
+	}
+
+	function createXHR(){
+		if(typeof XMLHttpRequest != "undefined"){
+			return new XMLHttpRequest();
+		}else if(typeof ActiveXObject != "undefined"){
+			if(typeof arguments.callee.activeXString != "string"){
+				var versions = ["MSXML2.XMLHttp.6.0", "MSXML2.XMLHttp.3.0", "MSXML2.XMLHttp"], i, len;
+
+				for(i = 0, len = versions.length; i < len; i++){
+					try{
+						new ActiveXObject(versions[i]);
+						arguments.callee.activeXString = versions[i];
+						break;
+					} catch(ex){
+						//skip
+					}
+				}
+			}
+
+			return new ActiveXObject(arguments.callee.activeXString);
+		}else{
+			throw new Error("NO XHR object available.");
+		}
+	}
+</script>
+
+					<div class="control-group text-warning text-center"><!--填写读卡后的资料-->
+		                <table class="table table-striped table-bordered">
+		                	<thead>
+		                		<tr>
+		                			<th class="text-center">会员卡编号</th>
+		                			<th class="text-center">会员姓名</th>
+		                			<th class="text-center">会员卡类别</th>
+		                			<th class="text-center">卡内余额</th>
+		                			<th class="text-center">发卡商家</th>
+		                		</tr>
+		                	</thead>
+		                	<tbody>
+		                		<tr>
+		                			<td class="text-center">88888</td>
+		                			<td class="text-center">黄甲猩</td>
+		                			<td class="text-center">高级</td>
+		                			<td class="text-center">666.00</td>
+		                			<td class="text-center">黄脑壳饭店</td>
+		                		</tr>
+		                	</tbody>
+		                </table>
+		            </div>
+					
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="money">实收金额：</label>
+						<div class="col-md-9">
+							<input type="password" class="form-control" id="money" placeholder="请输入实收金额">
+						</div>
+					</div>
+				</div>
+
+				<!-- 这里放按钮和其他小部件。一般居中显示。按钮以长条形态出现。 -->
+				<div class="form-group">
+					<div class="col-md-offset-3 col-md-6 text-center">
+						<button type="submit" class="btn btn-success btn-lg btn-block">确认无误，充值！</button>
+					</div>
+				</div>
+			</fieldset>			
+
+		</form>
+	</div>
+
+	<div class="container text-center bottom-radius">
+		©This page is made by <a href="">11 Group-SCAU</a>. <br />All rights reserved. 
+	</div>
+
+	<script src="../assets/js/jquery.min.js"></script>
+    <script src="../bs/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.tools.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+</body>
+</html>
